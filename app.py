@@ -30,7 +30,8 @@ def predict():
 	clf = MultinomialNB()
 	clf.fit(X_train,y_train)
 	clf.score(X_test,y_test)
-
+	
+	# calling POST method when submit clicked
 	if request.method == 'POST':
 		message = request.form['message']
 		data = [message]
